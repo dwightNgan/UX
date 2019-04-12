@@ -1,0 +1,61 @@
+.liquid-tabbar{
+  position: relative;
+  display: flex;
+  width: 375px;
+  padding: 22.5px 0;
+  overflow: hidden;
+  color: #C3C2C3;
+  border-radius: 18px;
+  // box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
+  > div{
+    flex: 1 1 0;
+    text-align: center;
+    div{
+      font-size: 14px;
+      opacity: 0;
+      transition: color 0.5s, opacity 0.5s;
+    }
+  }
+  span{
+    display: block;
+    font-size: 22.5px;
+    transition: color 0.5s;
+  }
+}
+.drop-effect{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25%;
+  svg{
+    width: 93.75px;
+    height: 32px;
+  }
+}
+
+div.icon-active{
+  color: #0495FF;
+  animation: icon-movement 1s;
+  div{
+    opacity: 1;
+  }
+}
+
+@keyframes icon-movement{
+  0%{
+    transform: translate3d(0, 0, 0);
+  }
+  41%{
+    transform: translate3d(0, 0, 0);
+  }
+  72%{
+    transform: translate3d(0, 5px, 0);
+  }
+  91%{
+    transform: translate3d(0, -2px, 0);
+  }
+  100%{
+    transform: translate3d(0, 0, 0);
+  }
+
+}
