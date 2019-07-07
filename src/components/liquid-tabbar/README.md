@@ -1,6 +1,6 @@
 # 水滴效果tabbar
 
-![Image](../../../gifs/liquid-tabbar.gif)
+![Image](../../../images/liquid-tabbar/liquid-tabbar.gif)
 
 [设计出处 https://uimovement.com/ui/7277/liquid-tabbar/](https://uimovement.com/ui/7277/liquid-tabbar/)
 
@@ -41,7 +41,7 @@ export default LiquidSVG
 
 整个水滴动画其实有三个元素，上面较大一块的液体，中间一点小的水滴，下面一滴大的水滴。
 
-![Image](../../../images/drop-5.png)
+![Image](../../../images/liquid-tabbar/drop-5.png)
 
 #### 液体的动画
 
@@ -49,11 +49,11 @@ export default LiquidSVG
 
 1. 展开状态
 
-![Image](../../../images/drop-3.jpg)
+![Image](../../../images/liquid-tabbar/drop-3.jpg)
 
 2. 闭合状态（合成一条线）
 
-![Image](../../../images/drop-4.jpg)
+![Image](../../../images/liquid-tabbar/drop-4.jpg)
 
 在sketch导出的源码中，我们只需要取出path元素作动画素材。
 
@@ -104,4 +104,46 @@ class LiquidSVG extends Component {
 export default LiquidSVG
 ```
 
+\<animate>标签中，“attributeName”是指需要执行动画的属性；keyTimes是指关键帧时机；values是指关键帧的时候属性的值；dur指动画时长；repeatCount指动画次数（默认一次）。
 
+svg中\<animate>属性与css的animation的对应关系：
+
+```css
+  .animate{
+    animation-name: animate;
+    animation-duration: 1s;  /* dur值 */
+    animation-iteration-count: 1; /* repeatCount值 */
+  }
+
+  @keyframes animate {  
+    0% { /* keyTimes="0; 0.5; 1" 中的0，以下同理  */
+      /* attributeName="opacity" */
+      opacity: 1 /* values=“1; 0; 1”中的1，以下同理 */
+    }
+    50% {
+      opacity: 0
+    }
+    100%{
+      opacity: 1
+    }
+  }
+```
+
+走到这一步，你可以看到：
+
+![Image](../../../images/liquid-tabbar/drop-6.gif)
+
+#### 小水滴动画
+
+小水滴动画相对比较简单，就是一个点位移动画。
+
+分解一下关键帧（这里图可能比较小，从视频那里看会更清晰。）
+
+![Image](../../../images/liquid-tabbar/drop-7.png)
+
+* 0: 动画开始
+* 0.33 小水滴出现
+* 0.5 开始下移
+* 0.69 下移结束，并开始缩小
+* 0.85 缩小至0，并消失
+* 1 动画结束

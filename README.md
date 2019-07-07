@@ -8,7 +8,7 @@
   3. 各个范例中图标是font-awesome
 
 ## 1.水滴效果tabbar
-![Image](./gifs/liquid-tabbar.gif)
+![Image](./images/liquid-tabbar/liquid-tabbar.gif)
 
 [详细分享](./src/components/liquid-tabbar/README.md)
 

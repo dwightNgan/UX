@@ -4,23 +4,23 @@
 
 点击sketch左上角加号选择矢量工具，或者快捷键“v”。然后就可以在画板上画不规则图形。
 
-![Image](./images/export-svg-1.png)
+![Image](./images/export-svg/export-svg-1.png)
 
 ## 2.画出不规则图形
 
 选择矢量工具后，就可以开始在画图形，再配合右边栏的工具画出你想要的图形。
 
-![Image](./images/export-svg-2.png)
+![Image](./images/export-svg/export-svg-2.png)
 
 ## 3.清除位移
 
 因为sketch导出的svg位置是以画板左上角为起始点，所以画完之后，要将图形的x，y位置清零。
 
-![Image](./images/export-svg-3.png)
+![Image](./images/export-svg/export-svg-3.png)
 
 ## 4.导出svg源码
 
-![Image](./images/export-svg-4.png)
+![Image](./images/export-svg/export-svg-4.png)
 
 画完后，清空位移后，右键-->Copy SVG Code，就可以复制出svg源码。
 
