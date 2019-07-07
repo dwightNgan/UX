@@ -17,4 +17,9 @@
 
 ## 开关效果chatbar
 
+![Image](./images/switch-chatbar/chat-bar.gif)
+
+
 ## 滚珠效果tabbar
+
+![Image](./images/bubble-tabbar/bubble-tabbar.gif)
